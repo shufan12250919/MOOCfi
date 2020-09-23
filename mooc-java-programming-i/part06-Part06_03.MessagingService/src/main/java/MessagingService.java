@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author linshu-fan
+ */
+import java.util.ArrayList;
+
+public class MessagingService {
+    private ArrayList<Message> server;
+    
+    public MessagingService(){
+        this.server = new ArrayList<>();
+    }
+    
+    public void add(Message message){
+        if (message.getContent().length() < 281){
+            this.server.add(message);
+        }
+    }
+    
+    public ArrayList<Message> getMessages(){
+        return this.server;
+    }
+    
+    
+    
+}
